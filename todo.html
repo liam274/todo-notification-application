@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="todo.css" />
+    <title>Todo - notification application</title>
+    <link rel="icon" href="icon.png" />
+</head>
+
+<body>
+    <div id="toolbar">
+        <button title="add todo" id="addTodoButton">
+            <span>+</span>
+        </button>
+        <button title="delete todo" id="deleteTodoButton">
+            <span>-</span>
+        </button>
+    </div>
+    <div id="todo-outter">
+        <div id="todo-header">
+            <h1># Todo</h1>
+            <div id="todo-header-header">
+                <h2 id="complement">Complement: 0.00%</h2>
+                <form id="filter">
+                    <input id="All" type="radio" name="filter" value="all" hidden checked />
+                    <label for="All">All</label>
+                    <input id="Actived" type="radio" name="filter" value="actived" hidden />
+                    <label for="Actived">Actived</label>
+                    <input id="Done" type="radio" name="filter" value="done" hidden />
+                    <label for="Done">Done</label>
+                </form>
+            </div>
+        </div>
+        <hr />
+        <div id="todo">
+            <h1 id="noTodo"> Sorry, but we can't find any todo</h1>
+        </div>
+    </div>
+    <div id="addTodo">
+        <form>
+            <input placeholder="Please enter the title..." id="newTitle" required />
+            <textarea placeholder="Please enter the contents..." id="newContent" required></textarea>
+            <input type="date" id="newDate" required />
+            <button id="newTodo" for="yoyoyo">
+                <span>
+                    Add!
+                </span>
+            </button>
+            <input type="submit" id="yoyoyo" style="display: none" />
+            <button id="exit">
+                <span>❌</span>
+            </button>
+        </form>
+    </div>
+    <div id="deleteTodo">
+        <form>
+            <select id="deleteTitle" required>
+                <option value="" hidden>Please select the title...</option>
+            </select>
+            <button id="lossTodo" for="yoyo">
+                <span>
+                    Delete!
+                </span>
+            </button>
+            <input type="submit" id="yoyo" style="display: none" />
+            <button id="exitDelete">
+                <span>❌</span>
+            </button>
+        </form>
+    </div>
+</body>
+<script defer src="todo.js"></script>
+
+</html>

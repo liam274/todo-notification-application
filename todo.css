@@ -1,0 +1,258 @@
+* {
+    font-family: monospace !important;
+    color: white !important;
+    box-sizing: border-box !important;
+    user-select: none;
+    transition: all .1s ease !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    margin: 0;
+    overflow: hidden;
+}
+
+#todo-outter {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 90vh;
+    width: 90vw;
+    border: 5px solid white;
+    padding: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#todo {
+    display: inline-flex;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow-x: visible;
+}
+
+#noTodo {
+    font-size: 60px;
+    text-align: center;
+    align-self: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    display: none;
+}
+
+#toolbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.todo {
+    width: 100%;
+    height: auto;
+    padding: 20px 20px;
+    overflow: hidden;
+    border-color: black;
+}
+
+a,
+a * {
+    text-decoration: none !important;
+    width: 100%;
+}
+
+.todo:hover {
+    scale: 1.05;
+    border: 2px solid black;
+    box-shadow: 0 0 20px 10px black;
+    border-radius: 5px;
+}
+
+.intro {
+    width: 40%;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    background-image: linear-gradient(to right, white 70%, #ffffffa0);
+    background-clip: text;
+    color: transparent !important;
+}
+
+.addtional-information {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+input[type=checkbox] {
+    width: 20px;
+    aspect-ratio: 1;
+}
+
+button {
+    width: auto;
+    aspect-ratio: 1/1;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size: 0;
+    color: white;
+    cursor: pointer;
+    transition: transform .3s ease !important;
+    transform-origin: center;
+}
+
+button span {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+}
+
+button:hover {
+    transform: rotate(90deg);
+}
+
+button:focus {
+    outline: none;
+}
+
+hr {
+    border: none;
+    min-height: 5px;
+    width: 100%;
+    background-color: white;
+    margin: 20px 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #ffffffe0;
+    font-style: italic;
+}
+
+input {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+}
+
+textarea {
+    width: 50%;
+    height: 30%;
+    resize: none;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#addTodo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffa0;
+}
+
+form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#exit,
+#exitDelete {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#exit span,
+#exitDelete span {
+    text-align: center;
+}
+
+#deleteTodo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    display: none;
+    height: 100%;
+    background-color: #ffffffa0;
+}
+
+select {
+    background-color: #1e1e1e;
+    padding: 20px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+}
+
+#todo-header {
+    width: 100%;
+}
+
+#todo-header-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#filter {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+label {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+input[type=radio]:checked+label {
+    font-weight: 900;
+    color: skyblue !important;
+}
